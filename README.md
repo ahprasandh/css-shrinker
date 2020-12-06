@@ -1,2 +1,2 @@
-# css-shrinker
-CSS Shrinker
+# CSS shrinker
+Replaces all empty spaces in css
