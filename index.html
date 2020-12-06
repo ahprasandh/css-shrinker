@@ -29,13 +29,14 @@
             var beautify=function(e){
                 var text=inp.value.trim();
                 if(text && text.length>0){
+                    text=text.replace(/\n\n/g,'$n$')
                     var classes=text.split('}');
                     for(var i=0;i<classes.length;i++){
                         classes[i]=classes[i].trim().replace(/(?:\r\n|\r|\n)/g,'').replace(/\s\s+/g,' ').replace(/;\s+/g,';').replace(/:\s+/g,':').replace(/{\s+/g,'{').replace(/\s+{/g,'{')
                         // console.log(classes[i])
                     }
                     var out=document.getElementById('out')
-                    out.value=classes.join('}\n').replace(/\*\//g,'*/\n').replace(/\/\*/g,'\n/*')
+                    out.value=classes.join('}\n').replace(/\*\//g,'*/\n').replace(/\/\*/g,'\n/*').replace(/\$n\$(\s+){0,1}/g,"\n")
                     out.focus()
                     out.select()
                 }
