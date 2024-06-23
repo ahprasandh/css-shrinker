@@ -36,7 +36,7 @@
                         // console.log(classes[i])
                     }
                     var out=document.getElementById('out')
-                    out.value=classes.join('}\n').replace(/\*\//g,'*/\n').replace(/\/\*/g,'\n/*').replace(/\$n\$(\s+){0,1}/g,"\n")
+                    out.value=classes.join('}').replace(/\*\//g,'*/\n').replace(/\/\*/g,'\n/*').replace(/\$n\$(\s+){0,1}/g,"\n")
 //                     out.focus()
 //                     out.select()
                 }
